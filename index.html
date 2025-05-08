@@ -5,11 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griffin's NBA Site - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Homepage specific styles */
+        .latest-articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 10px 1;
+        }
+        
+        .section-card {
+            background: #D48657;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border-top: 4px solid;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .draft-card {
+            border-top-color: #FFD700; /* Gold */
+        }
+        
+        .playoffs-card {
+            border-top-color: #c8102e; /* NBA Red */
+        }
+        
+        .predictions-card {
+            border-top-color: #5D3FD3; /* Purple */
+        }
+        
+        .thoughts-card {
+            border-top-color: #228B22; /* Green */
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-category {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .card-title {
+            font-size: 1.3em;
+            margin: 10px 0;
+            color: #1d428a;
+        }
+        
+        .card-excerpt {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .card-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #1d428a;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .card-link:hover {
+            background-color: #c8102e;
+        }
+        
+        .welcome-message {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #D48657;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .latest-articles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body>
+<body style="background-color: lemonchiffon">
     <header>
         <img src="https://cdn.nba.com/logos/nba/nba-logoman-75-word_white.svg" alt="NBA Logo" class="nba-logo">
-        <h1>Griffin's NBA Site - Home</h1>
+        <h1>Griffin's NBA Site</h1>
     </header>
     
     <nav>
@@ -22,26 +120,63 @@
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="main-content">
+    <div class="container" style="background-color: lemonchiffon">
+        <div class="welcome-message">
             <h2>Welcome to Griffin's NBA Site</h2>
-            <p>Your one-stop destination for NBA analysis, opinions, and insights from a passionate basketball fan.</p>
-            
-            <div class="article">
-                <h3>Latest News</h3>
-                <p>The 2023 NBA Draft is just around the corner, and the race for the top picks is heating up. Check out my <a href="draft.html">Draft page</a> for complete analysis of all the top prospects.</p>
+            <p>Your source for unique insights on the NBA draft, playoffs, Sixers, and the league's history</p>
+        </div>
+        
+        <h2>Latest Articles From Each Page</h2>
+        <div class="latest-articles">
+            <!-- Draft Section Card -->
+            <div class="section-card draft-card">
+                <img src="https://motorcyclesports.net/wp-content/uploads/2025/02/USATSI_25370667_168415193_lowres.jpg" alt="NBA Draft" class="card-image">
+                <div class="card-content">
+                    <div class="card-category">Draft</div>
+                    <h3 class="card-title">4 First Round Prospects That Could Be Steals</h3>
+                    <a href="draftsteals.html" class="card-link">Read Article</a>
+                </div>
             </div>
             
-            <div class="article">
-                <h3>Playoff Update</h3>
-                <p>The conference finals are underway with some surprising results. Visit the <a href="playoffs.html">Playoffs section</a> for my game-by-game breakdowns.</p>
+            <!-- Playoffs Section Card -->
+            <div class="section-card playoffs-card">
+                <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2025/05/06/USAT/83468942007-usatsi-26102270.jpg?crop=2572,2214,x1322,y284&width=700&height=603&format=pjpg&auto=webp" alt="NBA Playoffs" class="card-image">
+                <div class="card-content">
+                    <div class="card-category">Playoffs</div>
+                    <h3 class="card-title">3 Takeaways From The Start Of The Second Round</h3>
+                    <p class="card-excerpt"></p>
+                    <a href="twotake.html" class="card-link">Read Article</a>
+                </div>
+            </div>
+            
+            <!-- Predictions Section Card -->
+            <div class="section-card predictions-card">
+                <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc9efa4f3-69ea-4656-992f-a851c7e53e74_1200x694.png" alt="Sixers Image" class="card-image">
+                <div class="card-content">
+                    <div class="card-category">Sixers</div>
+                    <h3 class="card-title">2 Players The Philadelphia 76ers Should Consider Drafting If Their Pick Isn’t Top 2</h3>
+                    
+                    <a href="sixersprospects.html" class="card-link">Read Article</a>
+                </div>
+            </div>
+            
+            <!-- Random Thoughts Section Card -->
+            <div class="section-card draft-card">
+                <img src="https://cdn.abcotvs.com/dip/images/2504188_100717-wabc-conniehawkinsnew-img.jpg?w=1600" alt="NBA Draft" class="card-image">
+                <div class="card-content">
+                    <div class="card-category">History</div>
+                    <h3 class="card-title">3 All-Time Great NBA Players You’ve Never Heard Of</h3>
+                    <a href="underratedhistory.html" class="card-link">Read Article</a>
+                </div>
             </div>
         </div>
+        
+        
     </div>
     
-    <footer>
-        <p>&copy; 2025 Griffin's NBA Site. All rights reserved.</p>
-        <p>This site is not affiliated with the National Basketball Association.</p>
+    <footer style="background-color: lemonchiffon">
+        <p style="color: black">&copy; 2025 Griffin's NBA Site. All rights reserved.</p>
+        <p style="color: black">This site is not affiliated with the National Basketball Association.</p>
     </footer>
 </body>
 </html>
