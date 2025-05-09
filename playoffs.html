@@ -1,15 +1,169 @@
 <!DOCTYPE html>
-<html lang="en"><head> <link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griffin's NBA Site - Playoffs</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Playoffs Page Specific Styles */
+        body.playoffs-page {
+            background-color: lemonchiffon;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .playoffs-header {
+            background: lightblue;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .playoffs-header h1 {
+            font-size: 2.8em;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        
+        .playoffs-header img {
+            height: 100px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
+        }
+        
+        .playoffs-header img:hover {
+            transform: scale(1.05);
+        }
+        
+        .playoff-articles {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .playoff-article {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .playoff-article:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+        
+        .article-date {
+            background-color: #c8102e;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 0 0 8px 0;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-content {
+            padding: 30px;
+        }
+        
+        .article-content h3 {
+            color: #1d428a;
+            margin-top: 0;
+            font-size: 1.6em;
+            line-height: 1.3;
+        }
+        
+        .article-content h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .article-content h3 a:hover {
+            color: #c8102e;
+            text-decoration: none;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-bottom: 5px solid #c8102e;
+            transition: transform 0.5s ease;
+        }
+        
+        .playoff-article:hover .article-image {
+            transform: scale(1.03);
+        }
+        
+        .article-excerpt {
+            color: #555;
+            line-height: 1.7;
+            margin: 20px 0;
+            font-size: 1.05em;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #1d428a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #1d428a;
+        }
+        
+        .read-more:hover {
+            background-color: white;
+            color: #1d428a;
+            border-color: #1d428a;
+        }
+        
+        footer {
+            background-color: #1d428a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .playoffs-header h1 {
+                font-size: 2.2em;
+            }
+            
+            .playoffs-header img {
+                height: 80px;
+            }
+            
+            .article-image {
+                height: 220px;
+            }
+            
+            .article-content {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
-	
-<body>
-	
-    <header style="background-color: lightblue; color: white; padding: 20px; text-align: center;">
-        <img src="https://www.sportsmediawatch.com/wp-content/uploads/2018/03/nbaplayofflogo.png" alt="NBA Logo" class="nba-logo">
+<body class="playoffs-page">
+    <header class="playoffs-header">
+        <img src="https://www.sportsmediawatch.com/wp-content/uploads/2018/03/nbaplayofflogo.png" alt="NBA Playoffs Logo">
         <h1>2025 NBA Playoffs News</h1>
     </header>
     
@@ -23,51 +177,37 @@
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="main-content">
-            <h2>NBA Playoffs Coverage</h2>
-            <p>Complete analysis of the NBA playoffs, including series breakdowns, key matchups, and predictions.</p>
-			
-			
-			<div class="article">
-			<h3><u>May 6th, 2025</u></h3>
-   			 <h3> Article: <a href="twotake.html">Three Takeaways From The Start Of The Second Round</a></h3>
-    			<p>Here are <a href="playoffpredict.html">three important takeaways </a> I noticed from the start of the second round of the playoffs.</p>
-				<img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2025/05/06/USAT/83468942007-usatsi-26102270.jpg?crop=2572,2214,x1322,y284&width=700&height=603&format=pjpg&auto=webp" alt="Basketball prospect" style="max-width: 540px; margin: 0 15px 15px 0;">
-				</div>
-			
-			 <div class="article">
-			<h3><u>May 5th, 2025</u></h3>
-   			 <h3> Article: <a href="playoffpredict.html">My 2025 NBA Playoffs Second Round Predictions</a></h3>
-    			<p>Want some <a href="playoffpredict.html">second round playoff predictions</a>? In this article, I preview each second round matchup and give my series prediction along with a detailed explanation.</p>
-				<img src="https://www.azcentral.com/gcdn/authoring/authoring-images/2025/05/02/PNJM/83411133007-usatsi-23003319.jpg?crop=3956,2225,x0,y0&width=660&height=371&format=pjpg&auto=webp" alt="Basketball prospect" style="max-width: 540px; margin: 0 15px 15px 0;">
-				</div>
-            
-            <div class="article">
-                <h3>Current Playoff Picture</h3>
-                <ul>
-                    <li>Eastern Conference Finals: Celtics vs. Heat</li>
-                    <li>Western Conference Finals: Nuggets vs. Lakers</li>
-                </ul>
+    <div class="playoff-articles">
+        <!-- Article 1 -->
+        <div class="playoff-article">
+            <div class="article-date">May 9th, 2025</div>
+            <img src="https://www.indystar.com/gcdn/authoring/authoring-images/2025/05/07/PIND/83486530007-usatsi-26108202.jpg" alt="Haliburton" class="article-image">
+            <div class="article-content">
+                <h3><a href="comeback.html">Which Team Down 2-0 In The Second Round Has The Best Chance Of Coming Back?</a></h3>
+                <p class="article-excerpt">Learn more about which NBA team down 2-0 in the second round is most likely to mount a comeback.</p>
+                <a href="comeback.html" class="read-more">Read Analysis</a>
             </div>
-            
-            <div class="article">
-                <h3>Series Predictions</h3>
-                <ul>
-                    <li>Celtics vs. Heat: Celtics in 6</li>
-                    <li>Nuggets vs. Lakers: Nuggets in 7</li>
-                </ul>
-                <p>The Nuggets have the best player in the series (Jokic), but the Lakers have the pedigree and LeBron's playoff experience.</p>
+        </div>
+        
+        <!-- Article 2 -->
+        <div class="playoff-article">
+            <div class="article-date">May 6th, 2025</div>
+            <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2025/05/06/USAT/83468942007-usatsi-26102270.jpg" alt="Shai Gilgeous-Alexander" class="article-image">
+            <div class="article-content">
+                <h3><a href="twotake.html">Three Takeaways From The Start Of The Second Round</a></h3>
+                <p class="article-excerpt">Here are three important takeaways I noticed from the start of the second round of the playoffs.</p>
+                <a href="twotake.html" class="read-more">Read Takeaways</a>
             </div>
-            
-            <div class="article">
-                <h3>Players to Watch</h3>
-                <ul>
-                    <li>Nikola Jokic - Can he carry the Nuggets to their first Finals?</li>
-                    <li>Jimmy Butler - Playoff Jimmy is a different beast</li>
-                    <li>Jayson Tatum - Time for the young star to take the next step</li>
-                    <li>Anthony Davis - When healthy, he's the best two-way big in the game</li>
-                </ul>
+        </div>
+        
+        <!-- Article 3 -->
+        <div class="playoff-article">
+            <div class="article-date">May 5th, 2025</div>
+            <img src="https://www.azcentral.com/gcdn/authoring/authoring-images/2025/05/02/PNJM/83411133007-usatsi-23003319.jpg" alt="Derrick White" class="article-image">
+            <div class="article-content">
+                <h3><a href="playoffpredict.html">My 2025 NBA Playoffs Second Round Predictions</a></h3>
+                <p class="article-excerpt">Want some second round playoff predictions? In this article, I preview each second round matchup and give my series prediction along with a detailed explanation.</p>
+                <a href="playoffpredict.html" class="read-more">Read Predictions</a>
             </div>
         </div>
     </div>

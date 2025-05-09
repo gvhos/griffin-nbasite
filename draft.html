@@ -1,19 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <link rel="stylesheet" href="styles.css">
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Griffin's NBA Site - Draft</title>
     <link rel="stylesheet" href="styles.css">
-	
+    <style>
+        /* Draft Page Specific Styles */
+        body.draft-page {
+            background-color: lemonchiffon;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .draft-header {
+            background: lightblue;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .draft-header h1 {
+            font-size: 2.8em;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+        
+        .draft-header img {
+            height: 100px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+            transition: transform 0.3s ease;
+        }
+        
+        .draft-header img:hover {
+            transform: scale(1.05);
+        }
+        
+        .draft-articles {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .draft-article {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            margin-bottom: 50px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .draft-article:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+        
+        .article-date {
+            background-color: #FFD700;
+            color: #1d428a;
+            padding: 10px 20px;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 0 0 8px 0;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
+        }
+        
+        .article-content {
+            padding: 30px;
+        }
+        
+        .article-content h3 {
+            color: #1d428a;
+            margin-top: 0;
+            font-size: 1.6em;
+            line-height: 1.3;
+        }
+        
+        .article-content h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .article-content h3 a:hover {
+            color: #c8102e;
+            text-decoration: none;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-bottom: 5px solid #FFD700;
+            transition: transform 0.5s ease;
+        }
+        
+        .draft-article:hover .article-image {
+            transform: scale(1.03);
+        }
+        
+        .article-excerpt {
+            color: #555;
+            line-height: 1.7;
+            margin: 20px 0;
+            font-size: 1.05em;
+        }
+        
+        .read-more {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #1d428a;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid #1d428a;
+        }
+        
+        .read-more:hover {
+            background-color: white;
+            color: #1d428a;
+            border-color: #1d428a;
+        }
+        
+        .prospect-list {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .prospect-list h3 {
+            color: #1d428a;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        footer {
+            background-color: #1d428a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .draft-header h1 {
+                font-size: 2.2em;
+            }
+            
+            .draft-header img {
+                height: 80px;
+            }
+            
+            .article-image {
+                height: 220px;
+            }
+            
+            .article-content {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
-	
-<body>
-	
-    <header style="background-color: lightblue; color: white; padding: 20px; text-align: center;">
-        <img src="https://www.sportsmediawatch.com/wp-content/uploads/2018/06/nbadraftlogo.png" alt="NBA Draft" class ="draft-header-img"/>
-	<h1 style="color: white; font-size: 2.5em;">NBA Draft Coverage</h1>
+<body class="draft-page">
+    <header class="draft-header">
+        <img src="https://www.sportsmediawatch.com/wp-content/uploads/2018/06/nbadraftlogo.png" alt="NBA Draft" class="draft-header-img">
+        <h1>NBA Draft Coverage</h1>
     </header>
     
     <nav>
@@ -26,51 +192,35 @@
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="main-content">
-            <h2> NBA Draft Analysis</h2>
-            <p>Personalized coverage of the 2025 NBA Draft, including sleepers, hot takes, and big boards. </p>
-			
-			<div class="article">
-			<h3><u>May 7th, 2025</u></h3>
-   			 <h3> Article: <a href="draftsteals.html">4 First Round Prospects That Could Be Steals</a></h3>
-    			<p>Take a look at <a href="draftsteals.html">4 first round prospects</a> that could be steals based on where they're projected to be drafted.</p>
-				<img src="https://motorcyclesports.net/wp-content/uploads/2025/02/USATSI_25370667_168415193_lowres.jpg" alt="Thomas Sorber" style="max-width: 540px; margin: 0 15px 15px 0;">
-				</div>
-			
-            <div class="article">
-			<h3><u>May 5th, 2025</u></h3>
-   			 <h3>Article: <a href="draftprospects.html">My Top 5 Prospects in the 2025 NBA Draft</a> </h3>
-    			<p>Check out my article of the <a href="draftprospects.html">Top 5 Prospects in the 2025 NBA Draft</a>, with stats, a full scouting report, and NBA comparisons for each prospect!</p>
-				<img src="https://s.yimg.com/ny/api/res/1.2/fjnpno0YZnDLWfgqaoC61w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02Nzk7Y2Y9d2VicA--/https://s.yimg.com/os/creatr-uploaded-images/2025-04/d5c19ab0-25ec-11f0-beeb-4fb76ff1d143" alt="Basketball prospect" style="max-width: 540px; margin: 0 15px 15px 0;">
-				</div>
-			
-			
-            <div class="article">
-                <h3>Top 5 Draft Prospects</h3>
-                <ol>
-                    <li>Victor Wembanyama - The clear #1 pick with generational talent</li>
-                    <li>Scoot Henderson - Explosive guard with superstar potential</li>
-                    <li>Brandon Miller - Smooth shooting wing with great size</li>
-                    <li>Amen Thompson - Elite athlete with playmaking skills</li>
-                    <li>Ausar Thompson - Two-way wing with tremendous upside</li>
-                </ol>
-            </div>
-            
-            <div class="article">
-                <h3>Sleepers to Watch</h3>
-                <ul>
-                    <li>Jordan Hawkins - Sharpshooter who could be this year's Desmond Bane</li>
-                    <li>Leonard Miller - Raw but talented forward with huge upside</li>
-                    <li>Rayan Rupert - International wing with defensive potential</li>
-                </ul>
-            </div>
-            
-            <div class="article">
-                <h3>Team Needs Analysis</h3>
-                <p>The Pistons desperately need shooting, while the Rockets could use a true point guard. The Spurs will likely build around Wembanyama if they get the #1 pick.</p>
+    <div class="draft-articles">
+        <!-- Article 1 -->
+        <div class="draft-article">
+            <div class="article-date">May 7th, 2025</div>
+            <img src="https://motorcyclesports.net/wp-content/uploads/2025/02/USATSI_25370667_168415193_lowres.jpg" alt="Thomas Sorber" class="article-image">
+            <div class="article-content">
+                <h3><a href="draftsteals.html">4 First Round Prospects That Could Be Steals</a></h3>
+                <p class="article-excerpt">Take a look at 4 first round prospects that could be steals based on where they're projected to be drafted.</p>
+                <a href="draftsteals.html" class="read-more">Read Analysis</a>
             </div>
         </div>
+        
+        <!-- Article 2 -->
+        <div class="draft-article">
+            <div class="article-date">May 5th, 2025</div>
+            <img src="https://s.yimg.com/ny/api/res/1.2/fjnpno0YZnDLWfgqaoC61w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02Nzk7Y2Y9d2VicA--/https://s.yimg.com/os/creatr-uploaded-images/2025-04/d5c19ab0-25ec-11f0-beeb-4fb76ff1d143" alt="Basketball prospect" class="article-image">
+            <div class="article-content">
+                <h3><a href="draftprospects.html">My Top 5 Prospects in the 2025 NBA Draft</a></h3>
+                <p class="article-excerpt">Check out my article of the Top 5 Prospects in the 2025 NBA Draft, with stats, a full scouting report, and NBA comparisons for each prospect!</p>
+                <a href="draftprospects.html" class="read-more">Read Article</a>
+            </div>
+        </div>
+        
+        <!-- Prospect Lists -->
+      
+        
+        
+        
+        
     </div>
     
     <footer>
