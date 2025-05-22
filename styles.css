@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
 }
 
+
+
 header {
 	/*previously #1d428a, (dark blue color)*/
     background-color: lightblue;
@@ -168,6 +170,38 @@ footer {
     margin-top: 10px;
 }
 
+
+/* Random Article Button Styles */
+.random-article-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.random-btn {
+    background-color: #1d428a; /* NBA blue */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.random-btn:hover {
+    background-color: #c8102e; /* NBA red */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.random-btn:active {
+    transform: translateY(0);
+}
+
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -175,5 +209,6 @@ footer {
     }
     nav li {
         margin: 5px 0;
+		
     }
 }
